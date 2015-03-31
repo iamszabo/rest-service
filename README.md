@@ -1,0 +1,1 @@
+#Some fun with REST / Spring MVC / Spring Security

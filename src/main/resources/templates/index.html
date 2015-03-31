@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser} ?: 'Stranger']]!, this is the home page of this cool app </h1>
+    <form th:action="@{/logout}" th:if="${#httpServletRequest.remoteUser != null}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+    <p><a th:href="@{/image}">Click here</a> if you wanna see something even cooler.</p>
+</body>
+</html>
